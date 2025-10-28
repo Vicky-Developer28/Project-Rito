@@ -30,6 +30,7 @@ ALLOWED_HOSTS = [
     't67tfr22-8000.inc1.devtunnels.ms',
     'localhost',
     '127.0.0.1',
+    '*',
     '0.0.0.0',  # Added for good measure
 ]
 
@@ -38,6 +39,7 @@ CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',
     'http://127.0.0.1:8000',
     'http://localhost:3000',
+    '*',
 ]
 
 # Also make sure you have these for devtunnels
