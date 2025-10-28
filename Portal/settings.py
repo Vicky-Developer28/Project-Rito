@@ -25,24 +25,31 @@ ADMINS = [("Admin", "vicky28.developer@gmail.com")]
 
 
 # settings.py
+# ========== SECURITY SETTINGS ==========
 
+# ALLOWED_HOSTS - For request validation
 ALLOWED_HOSTS = [
-    't67tfr22-8000.inc1.devtunnels.ms',
-    'localhost',
-    '127.0.0.1',
-    '*',
-    '0.0.0.0',  # Added for good measure
+    #'t67tfr22-8000.inc1.devtunnels.ms',
+    #'localhost',
+    #'127.0.0.1',
+    '.onrender.com',  # For Render deployment
+    '0.0.0.0',
 ]
 
+# CSRF_TRUSTED_ORIGINS - For Cross-Site Request Forgery protection
+# Must use full URLs with schemes (http:// or https://)
 CSRF_TRUSTED_ORIGINS = [
-    'https://t67tfr22-8000.inc1.devtunnels.ms',  # Use https for devtunnels
-    'http://localhost:8000',
-    'http://127.0.0.1:8000',
-    'http://localhost:3000',
-    '*',
+    #'https://t67tfr22-8000.inc1.devtunnels.ms',
+    #'http://localhost:8000',
+    #'http://127.0.0.1:8000', 
+    #'http://localhost:3000',
+    'https://*.onrender.com',  # For Render deployment
+    # Add your production domains here when ready:
+    # 'https://your-domain.com',
+    # 'https://www.your-domain.com',
 ]
 
-# Also make sure you have these for devtunnels
+# Proxy settings for platforms like Render, Heroku, etc.
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 USE_X_FORWARDED_HOST = True
 USE_X_FORWARDED_PORT = True
