@@ -4,10 +4,10 @@
 {% block title %}#{{ topic.name }} - Rito Community{% endblock %}
 
 {% block content %}
-<div class="min-h-screen bg-gray-50 dark:bg-slate-900 py-8">
+<div class="min-h-screen bg-gray-50 dark:bg-black py-8">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Topic Header -->
-        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-slate-700 mb-6">
+        <div class="bg-white dark:bg-black rounded-xl p-6 shadow-sm border border-gray-200 dark:border-slate-700 mb-6">
             <div class="flex items-center justify-between mb-4">
                 <div>
                     <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">#{{ topic.name }}</h1>
@@ -15,7 +15,7 @@
                     <p class="text-gray-600 dark:text-gray-400 text-lg">{{ topic.description }}</p>
                     {% endif %}
                 </div>
-                <button class="follow-topic-btn px-4 py-2 {% if is_following %}bg-blue-600 text-white{% else %}bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300{% endif %} rounded-lg font-medium transition-colors flex items-center space-x-2" data-topic-id="{{ topic.id }}">
+                <button class="follow-topic-btn px-4 py-2 {% if is_following %}bg-blue-600 text-white{% else %}bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300{% endif %} rounded-lg font-medium transition-colors flex items-center space-x-2" data-topic-id="{{ topic.id }}">
                     <i class="{% if is_following %}fas{% else %}far{% endif %} fa-bell"></i>
                     <span>{% if is_following %}Following{% else %}Follow{% endif %}</span>
                 </button>
@@ -50,7 +50,7 @@
         <!-- Questions in this Topic -->
         <div class="space-y-4">
             {% for question in questions %}
-            <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-slate-700 hover:shadow-md transition-shadow">
+            <div class="bg-white dark:bg-black rounded-xl p-6 shadow-sm border border-gray-200 dark:border-slate-700 hover:shadow-md transition-shadow">
                 <!-- Question Header -->
                 <div class="flex items-start justify-between mb-3">
                     <div class="flex items-center space-x-3">
@@ -116,7 +116,7 @@
                 </div>
             </div>
             {% empty %}
-            <div class="bg-white dark:bg-slate-800 rounded-xl p-8 text-center shadow-sm border border-gray-200 dark:border-slate-700">
+            <div class="bg-white dark:bg-black rounded-xl p-8 text-center shadow-sm border border-gray-200 dark:border-slate-700">
                 <i class="fas fa-question-circle text-4xl text-gray-400 mb-4"></i>
                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">No questions in this topic yet</h3>
                 <p class="text-gray-600 dark:text-gray-400 mb-4">Be the first to ask a question about #{{ topic.name }}</p>
@@ -159,14 +159,14 @@
                 const text = button.querySelector('span');
                 
                 if (data.following) {
-                    button.classList.remove('bg-gray-100', 'dark:bg-slate-700', 'text-gray-700', 'dark:text-gray-300');
+                    button.classList.remove('bg-gray-100', 'dark:bg-black', 'text-gray-700', 'dark:text-gray-300');
                     button.classList.add('bg-blue-600', 'text-white');
                     icon.classList.remove('far');
                     icon.classList.add('fas');
                     text.textContent = 'Following';
                 } else {
                     button.classList.remove('bg-blue-600', 'text-white');
-                    button.classList.add('bg-gray-100', 'dark:bg-slate-700', 'text-gray-700', 'dark:text-gray-300');
+                    button.classList.add('bg-gray-100', 'dark:bg-black', 'text-gray-700', 'dark:text-gray-300');
                     icon.classList.remove('fas');
                     icon.classList.add('far');
                     text.textContent = 'Follow';

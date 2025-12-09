@@ -93,11 +93,11 @@
                 // Remove active class from all buttons
                 document.querySelectorAll('.tab-button').forEach(btn => {
                     btn.classList.remove('active', 'bg-blue-600', 'text-white');
-                    btn.classList.add('bg-gray-100', 'dark:bg-slate-700', 'text-gray-700', 'dark:text-gray-300');
+                    btn.classList.add('bg-gray-100', 'dark:bg-black', 'text-gray-700', 'dark:text-gray-300');
                 });
                 
                 // Add active class to clicked button
-                this.classList.remove('bg-gray-100', 'dark:bg-slate-700', 'text-gray-700', 'dark:text-gray-300');
+                this.classList.remove('bg-gray-100', 'dark:bg-black', 'text-gray-700', 'dark:text-gray-300');
                 this.classList.add('active', 'bg-blue-600', 'text-white');
                 
                 // Hide all tab contents

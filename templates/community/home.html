@@ -4,7 +4,7 @@
 {% block title %}Rito Community - Questions & Answers{% endblock %}
 
 {% block content %}
-<div class="min-h-screen bg-gray-50 dark:bg-slate-900">
+<div class="min-h-screen bg-gray-50 dark:bg-black">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <!-- Header -->
         <div class="mb-8">
@@ -58,22 +58,22 @@
                 <div class="dark-card rounded-xl p-4">
                     <nav class="space-y-2">
                         <a href="{% url 'user:community' %}" 
-                           class="flex items-center px-3 py-2 text-gray-300 hover:bg-slate-700 rounded-lg transition-colors {% if request.path == '/community/' %}bg-slate-700 text-white{% endif %}">
+                           class="flex items-center px-3 py-2 text-gray-300 hover:bg-black rounded-lg transition-colors {% if request.path == '/community/' %}bg-black text-white{% endif %}">
                             <i class="fas fa-home mr-3"></i>
                             Home
                         </a>
                         <a href="{% url 'user:topics' %}" 
-                           class="flex items-center px-3 py-2 text-gray-300 hover:bg-slate-700 rounded-lg transition-colors">
+                           class="flex items-center px-3 py-2 text-gray-300 hover:bg-black rounded-lg transition-colors">
                             <i class="fas fa-tags mr-3"></i>
                             Topics
                         </a>
                         <a href="#" 
-                           class="flex items-center px-3 py-2 text-gray-300 hover:bg-slate-700 rounded-lg transition-colors">
+                           class="flex items-center px-3 py-2 text-gray-300 hover:bg-black rounded-lg transition-colors">
                             <i class="fas fa-bookmark mr-3"></i>
                             Bookmarks
                         </a>
                         <a href="{% url 'user:search' %}" 
-                           class="flex items-center px-3 py-2 text-gray-300 hover:bg-slate-700 rounded-lg transition-colors">
+                           class="flex items-center px-3 py-2 text-gray-300 hover:bg-black rounded-lg transition-colors">
                             <i class="fas fa-search mr-3"></i>
                             Search
                         </a>
@@ -91,7 +91,7 @@
                         <a href="{% url 'user:topic_detail' topic.slug %}" 
                            class="flex items-center justify-between text-sm text-gray-400 hover:text-blue-400 transition-colors group">
                             <span class="group-hover:underline">#{{ topic.name }}</span>
-                            <span class="bg-slate-700 px-2 py-1 rounded-full text-xs">
+                            <span class="bg-black px-2 py-1 rounded-full text-xs">
                                 {{ topic.question_count }}
                             </span>
                         </a>
@@ -176,7 +176,7 @@
                     <nav class="flex space-x-2">
                         {% if questions.has_previous %}
                         <a href="?page={{ questions.previous_page_number }}" 
-                           class="px-4 py-2 text-gray-400 hover:bg-slate-700 rounded-lg transition-colors">
+                           class="px-4 py-2 text-gray-400 hover:bg-black rounded-lg transition-colors">
                             <i class="fas fa-chevron-left"></i>
                         </a>
                         {% endif %}
@@ -186,7 +186,7 @@
                             <span class="px-4 py-2 bg-blue-600 text-white rounded-lg">{{ num }}</span>
                             {% else %}
                             <a href="?page={{ num }}" 
-                               class="px-4 py-2 text-gray-400 hover:bg-slate-700 rounded-lg transition-colors">
+                               class="px-4 py-2 text-gray-400 hover:bg-black rounded-lg transition-colors">
                                 {{ num }}
                             </a>
                             {% endif %}
@@ -194,7 +194,7 @@
 
                         {% if questions.has_next %}
                         <a href="?page={{ questions.next_page_number }}" 
-                           class="px-4 py-2 text-gray-400 hover:bg-slate-700 rounded-lg transition-colors">
+                           class="px-4 py-2 text-gray-400 hover:bg-black rounded-lg transition-colors">
                             <i class="fas fa-chevron-right"></i>
                         </a>
                         {% endif %}
@@ -228,7 +228,7 @@
                         </div>
                     </div>
                     <a href="{% url 'user:member_profile' member.user_id %}" 
-                       class="w-full bg-slate-700 hover:bg-slate-600 text-white py-2 px-4 rounded-lg text-sm font-medium transition-colors">
+                       class="w-full bg-black hover:bg-black text-white py-2 px-4 rounded-lg text-sm font-medium transition-colors">
                         View Profile
                     </a>
                 </div>

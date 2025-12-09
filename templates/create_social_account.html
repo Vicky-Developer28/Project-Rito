@@ -44,7 +44,7 @@
                                        class="hidden peer"
                                        {% if forloop.first %}checked{% endif %}>
                                 <label for="platform_{{ value }}" 
-                                       class="flex items-center p-4 bg-slate-800/50 rounded-lg border-2 border-slate-700 peer-checked:border-blue-500 cursor-pointer transition-all duration-300 hover:border-blue-400">
+                                       class="flex items-center p-4 bg-black/50 rounded-lg border-2 border-slate-700 peer-checked:border-blue-500 cursor-pointer transition-all duration-300 hover:border-blue-400">
                                     <div class="w-10 h-10 rounded-full flex items-center justify-center mr-4 
                                         {% if value == 'instagram' %}bg-pink-500/20 text-pink-400
                                         {% else %}bg-red-500/20 text-red-400{% endif %}">
@@ -101,12 +101,12 @@
                 {% endif %}
 
                 <!-- Terms Agreement -->
-                <div class="flex items-start space-x-3 p-4 bg-slate-800/30 rounded-lg">
+                <div class="flex items-start space-x-3 p-4 bg-black/30 rounded-lg">
                     <input type="checkbox" 
                            id="terms" 
                            name="terms" 
                            required
-                           class="mt-1 rounded border-gray-600 bg-slate-700 text-blue-500 focus:ring-blue-500 focus:ring-offset-slate-800">
+                           class="mt-1 rounded border-gray-600 bg-black text-blue-500 focus:ring-blue-500 focus:ring-offset-slate-800">
                     <label for="terms" class="text-gray-300 text-sm">
                         I authorize Rito System to create and manage my 
                         <span id="platform-name" class="font-semibold">Instagram</span> account 
@@ -120,7 +120,7 @@
                         <i class="fas fa-link mr-2"></i>
                         Connect Account
                     </button>
-                    <a href="{% url 'user:dashboard' %}" class="px-6 py-3 border border-gray-600 text-gray-300 hover:bg-slate-800 rounded-lg transition-colors flex items-center justify-center">
+                    <a href="{% url 'user:dashboard' %}" class="px-6 py-3 border border-gray-600 text-gray-300 hover:bg-black rounded-lg transition-colors flex items-center justify-center">
                         Cancel
                     </a>
                 </div>
